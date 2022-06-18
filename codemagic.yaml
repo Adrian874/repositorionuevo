@@ -54,6 +54,13 @@ workflows:
       - '*.snap'
       - build/windows/**/*.msix
       - flutter_drive.log
+      name: Build debug apk script: 
+      - name: Get Flutter packages 
+      script: flutter packages pub get 
+      - name: Flutter analyze
+      scrip: flutter analyze 
+      - name: Flutter unit tests 
+      script: fluter test
     publishing:
       email:
         recipients:
